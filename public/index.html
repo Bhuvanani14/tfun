@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TFun – Telugu Cinema Trivia Game</title>
+<meta name="description" content="TFun: a playful, mobile-first Telugu cinema trivia game. Guess characters, films and clues with an animated host. English and తెలుగు.">
+<meta name="theme-color" content="#2a0a3d">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rammetto+One&family=Noto+Sans+Telugu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#app">Skip to content</a>
+<div id="offline" class="offline" role="status" hidden>📴 You're offline. TFun still works – everything is saved on your device.</div>
+<div id="curtain" aria-hidden="true"><i></i><i></i></div>
+<header class="top" id="top">
+  <button class="logo" data-go="welcome" aria-label="TFun home">T<span>Fun</span></button>
+  <div class="top-actions">
+    <button id="muteBtn" class="icon-btn" aria-pressed="false" aria-label="Mute"></button>
+    <button class="icon-btn" data-go="progress" aria-label="Progress">🏆</button>
+    <button class="icon-btn" data-go="settings" aria-label="Settings">⚙️</button>
+  </div>
+</header>
+<main id="app" tabindex="-1"><p class="loading"><span class="spinner"></span> Loading TFun…</p></main>
+<noscript><p style="padding:2rem">TFun needs JavaScript to run.</p></noscript>
+<script src="app.js"></script>
+</body>
+</html>

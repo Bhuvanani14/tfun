@@ -1,0 +1,105 @@
+:root{--bg:#1d0833;--bg2:#2e0f4d;--card:#3b1763;--ink:#fff8ea;--muted:#d9c8f0;--gold:#ffc83d;--pink:#ff4f8b;--teal:#2ee6c5;--ok:#3be08a;--bad:#ff6b5e;--r:18px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Poppins','Noto Sans Telugu',system-ui,sans-serif;color:var(--ink);background:radial-gradient(circle at 20% 0,#5a1b8f 0,transparent 45%),radial-gradient(circle at 90% 100%,#8a1b57 0,transparent 40%),var(--bg);min-height:100vh;min-height:100dvh;line-height:1.5}
+:lang(te){font-family:'Noto Sans Telugu','Poppins',sans-serif}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:#000;padding:.5rem 1rem;z-index:99}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer}
+.top{display:flex;justify-content:space-between;align-items:center;padding:.6rem 1rem;max-width:760px;margin:0 auto}
+.logo{background:none;border:0;font-family:'Rammetto One',cursive;font-size:2rem;color:var(--gold);text-shadow:3px 3px 0 var(--pink),5px 5px 0 #000a;letter-spacing:1px}
+.logo span{color:var(--teal);text-shadow:3px 3px 0 var(--pink),5px 5px 0 #000a}
+.top-actions{display:flex;gap:.4rem}
+.icon-btn{min-width:44px;min-height:44px;border-radius:50%;border:2px solid #fff3;background:#ffffff14;font-size:1.2rem}
+.icon-btn:hover{background:#ffffff2a}
+main{max-width:760px;margin:0 auto;padding:.5rem 1rem 3rem;outline:0}
+h1{font-family:'Rammetto One',cursive;font-weight:400;font-size:clamp(1.6rem,6vw,2.4rem);margin:.4rem 0;color:var(--gold);line-height:1.15}
+h2{font-size:1.15rem;margin:1.2rem 0 .5rem}
+.sub{color:var(--muted);margin:.2rem 0 1rem}
+.card{background:linear-gradient(160deg,var(--card),var(--bg2));border:2px solid #fff2;border-radius:var(--r);padding:1rem;margin:.7rem 0;box-shadow:0 6px 0 #0006}
+.grid{display:grid;gap:.7rem}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.btn{min-height:48px;padding:.6rem 1.1rem;border-radius:14px;border:2px solid #000;background:var(--gold);color:#1b0a00;font-weight:700;box-shadow:0 4px 0 #000;transition:transform .1s}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #000}
+.btn.alt{background:#ffffff1c;color:var(--ink);border-color:#fff5;box-shadow:0 4px 0 #0007}
+.btn.pink{background:var(--pink);color:#fff}
+.btn.teal{background:var(--teal);color:#06231d}
+.btn.big{font-size:1.15rem;min-height:56px;width:100%}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.row.between{justify-content:space-between}
+.tile{text-align:left;display:flex;gap:.8rem;align-items:center;width:100%;padding:.9rem;border-radius:var(--r);border:2px solid #fff3;background:linear-gradient(160deg,var(--card),var(--bg2));box-shadow:0 5px 0 #0006}
+.tile:hover:not(:disabled){border-color:var(--gold)}
+.tile[aria-pressed=true],.tile.sel{border-color:var(--gold);background:#5a2a8e}
+.tile:disabled{opacity:.6}
+.tile b{display:block}.tile small{color:var(--muted)}
+.tile .em{font-size:2rem}
+.pill{display:inline-block;font-size:.75rem;padding:.15rem .6rem;border-radius:99px;background:#ffffff22;margin:.1rem}
+.pill.lic{background:var(--teal);color:#06231d;font-weight:700}
+.pill.org{background:var(--pink);color:#fff;font-weight:700}
+.bar{height:12px;background:#0005;border-radius:99px;overflow:hidden}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--gold));transition:width .4s}
+.stage{display:flex;gap:.8rem;align-items:flex-end}
+.host-wrap{flex:0 0 96px}
+.host{width:100%;height:auto;overflow:visible}
+.bubble{flex:1;background:#fff;color:#2a0a3d;border-radius:16px 16px 16px 4px;padding:.6rem .8rem;font-weight:600;min-height:56px;position:relative}
+.bubble small{display:block;color:#6a4a8a;font-weight:400;font-size:.7rem}
+.mood-tag{font-size:.7rem;color:var(--muted);text-align:center}
+.clue{font-size:1.2rem;font-weight:600;border-left:6px solid var(--pink);padding-left:.8rem;margin:.4rem 0}
+.clue-te{color:var(--muted);font-size:1rem}
+.opts{display:grid;gap:.6rem;margin-top:.8rem}
+.opt{display:flex;align-items:center;gap:.6rem;min-height:56px;padding:.6rem .9rem;border-radius:14px;border:2px solid #fff4;background:#ffffff14;font-weight:600;text-align:left;font-size:1.05rem;box-shadow:0 4px 0 #0007}
+.opt:hover:not(:disabled){border-color:var(--gold)}
+.opt .k{width:30px;height:30px;border-radius:50%;background:var(--gold);color:#000;display:grid;place-items:center;font-weight:700;flex:none}
+.opt small{display:block;color:var(--muted);font-weight:400}
+.opt.right{border-color:var(--ok);background:#0e5a35}
+.opt.wrong{border-color:var(--bad);background:#6a1d1d;text-decoration:line-through}
+.opt:disabled{cursor:default}
+.field{width:100%;min-height:52px;font:inherit;font-size:1.1rem;padding:.6rem .9rem;border-radius:14px;border:2px solid #fff5;background:#0004;color:var(--ink)}
+label{display:block;font-weight:600;margin:.5rem 0 .2rem}
+.verdict{font-size:1.4rem;font-weight:700;display:flex;gap:.5rem;align-items:center}
+.verdict.ok{color:var(--ok)}.verdict.no{color:var(--bad)}
+.timer{font-weight:700;font-variant-numeric:tabular-nums}
+.switch{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.5rem 0;border-bottom:1px solid #fff2}
+.switch input[type=checkbox]{width:26px;height:26px;accent-color:var(--teal)}
+select.field{padding:.5rem}
+.err,.empty{text-align:center;padding:1.5rem}
+.err{border-color:var(--bad)}
+.offline{background:var(--gold);color:#000;text-align:center;padding:.4rem;font-weight:600;font-size:.9rem}
+.spinner{display:inline-block;width:1.2em;height:1.2em;border:3px solid #fff5;border-top-color:var(--gold);border-radius:50%;animation:spin 1s linear infinite;vertical-align:middle}
+.loading{text-align:center;padding:3rem 0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-title{font-family:'Rammetto One',cursive;font-size:clamp(3.4rem,18vw,6rem);margin:0;color:var(--gold);text-shadow:4px 4px 0 var(--pink),8px 8px 0 #000a;line-height:1;text-align:center}
+.marquee{display:flex;justify-content:center;gap:.4rem;font-size:1.4rem;margin:.5rem 0}
+.marquee i{width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold);animation:blink 1.2s infinite alternate;font-style:normal}
+.marquee i:nth-child(even){animation-delay:.6s}
+@keyframes blink{to{opacity:.25}}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:40;overflow:hidden}
+.confetti i{position:absolute;top:-20px;width:10px;height:14px;animation:fall 1.6s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+/* curtain transition */
+#curtain{position:fixed;inset:0;z-index:60;pointer-events:none;display:flex}
+#curtain i{flex:1;background:repeating-linear-gradient(90deg,#9b1237 0 14px,#c21a4a 14px 28px);transform:scaleX(0);transition:transform .22s}
+#curtain i:first-child{transform-origin:left}#curtain i:last-child{transform-origin:right}
+#curtain.on i{transform:scaleX(1)}
+/* host animation */
+.host *{transition:all .2s}
+.host .m{display:none}
+.host[data-mood=idle] .m-idle,.host[data-mood=happy] .m-happy,.host[data-mood=oops] .m-oops,.host[data-mood=hint] .m-hint{display:block}
+.host[data-mood=oops] .eye{transform:scaleY(1.5)}
+.host[data-act=cheer]{animation:hop .5s 4}
+.host[data-act=dance]{animation:dance .6s 4}
+.host[data-act=pose]{animation:pose 1.6s 1 forwards}
+.host[data-act=oops]{animation:shake .4s 3}
+.host[data-act=lean]{animation:lean 1.2s 1}
+.host[data-act=cheer] .arm,.host[data-act=dance] .arm,.host[data-act=pose] .arm{transform:rotate(-50deg)}
+@keyframes hop{50%{transform:translateY(-14px)}}
+@keyframes dance{25%{transform:rotate(-8deg) translateY(-8px)}75%{transform:rotate(8deg) translateY(-8px)}}
+@keyframes pose{40%{transform:scale(1.18) rotate(-6deg)}100%{transform:scale(1.1)}}
+@keyframes shake{25%{transform:rotate(-14deg)}75%{transform:rotate(14deg)}}
+@keyframes lean{50%{transform:translateX(12px) rotate(10deg)}}
+body.calm *,body.calm *::before{animation:none!important;transition:none!important}
+body.calm #curtain{display:none}
+@media (prefers-reduced-motion:reduce){body:not(.full) *{animation:none!important;transition:none!important}body:not(.full) #curtain{display:none}}
+@media (min-width:600px){.opts.cols{grid-template-columns:1fr 1fr}}
